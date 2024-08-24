@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #1c1c1c;
+  }
+
+  .headerSpace {
+    width: 100%;
+    text-align: center;
+    background-color: #666;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    justify-content: center;
+    display: inline-block;
+    color: #eee;
+}
+ p,  span{
+    color: #c4c2c2;
+}
+  
+  .content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+.slider{
+    margin-bottom: 60px;
+    width: 270px;
+    height: 420px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 420px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 270px;
+}
+
+#radio1:checked ~.first{
+    margin-left: 0;
+}
+
+#radio2:checked ~.first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~.first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~.first{
+    margin-left: -60%;
+}
+
+#radio5:checked ~.first{
+    margin-left: -80%;
+}
+
+.title{
+    margin-top: -40px;
+}
+
+.stopwatch1, .stopwatch2{
+    display: flex;
+}
+
+.stopwatch1{
+    margin-top: 10px;
+}
+
+.stopwatch2{
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.stopwatch1 div, .stopwatch2 div{
+    flex-basis: 100px;
+    display: flex;
+    align-items: baseline;
+}
+
+.stopwatch1 div p, .stopwatch2 div p{
+    color: aqua;
+}
+
+.stopwatch1 div p, .stopwatch2 div p, .stopwatch1 div span, .stopwatch2 div span{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.title p{
+    color: aqua;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+/* linha */
+hr { 
+    border: 1px solid aqua;
+    width: 100px;
+  }
+
+.message{
+    margin: 20px 0;
+    width: 680px;
+    text-align: justify;
+}
+  
+
+@media screen and (max-width: 1070px){
+    main {
+        width: 50%;
+        align-items: center;
+    }
+
+    .headerSpace{
+        margin-left: -20px;
+    }
+
+    .message{
+        width: 300px;
+    }
+
+    .stopwatch1, .stopwatch2{
+        justify-content: center;
+        width: 50px;
+        
+    }
+
+    .stopwatch1 div p, .stopwatch2 div p, .title p, .stopwatch1 div span, .stopwatch2 div span, .message p{
+        font-size: 12px;
+    }
+}
